@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Luca Bazzanella</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="smooth-scroll-wrapper">
+            <div class="content">
+                <div class="container">
+                    <h1 class="text">Luca Bazzanella</h1>
+                    <div class="img">
+                        <img src="img/DSC09160_ps.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                        Coder based in North Italy  <br><br>
+                        Backend developer <br><br>
+                        Graphic designer
+                    </p>
+                </div>
+                <div class="container">
+                    <h1 class="text">Work With </h1>
+                    <div class="img">
+                        <img src="img/DSC09022_psPano.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                        2016/7 Wuerth Phoenix -  MySQL Database | .NET <br>
+                        2017/8 Studio Pragma - Java | JS Primefaces <br>
+                        2018 CoderDojo - C++ | Python <br>
+                        2019 Supsystic  - PHP | JS | WP plugin <br>
+                        2019/20 FBK TEV - Unity 3D | Python | ARcore  <br>
+                        2020 Factory Mind -  WebGL
+                    </p>
+                </div>
+
+                <div class="container">
+                    <h1 class="text">(R)evolution high</h1>
+                    <div class="img">
+                        <img src="img/DSC08241_ps_pano.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                        Student UniTn .Computer Science<br>
+                        WebGL enthusiasts <br>
+                        Obsessed by aestetich 
+                    </p>
+                </div>
+                <div class="container">
+                    <h1 class="text">Ispiration</h1>
+                    <div class="img">
+                        <img src="img/IMG_0228_ps.jpg" alt="" />
+                    </div>
+                    <p class="text">
+                        . <br>
+                        . <br>
+                        . <br>
+                        . <a href="https://lucabazzanella.com/music/">Portfolio audio production</a> <br>
+                        . <br>
+                        . <br>
+                        . <a href="https://zabba.lucabazzanella.com">Portfolio fashion work </a><br>
+                        . <br>
+                        . <br>
+                        . Degree in Music Composition <br>
+                        . <br>
+                        . <br>
+                        .
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            const body = document.body,
+                scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+                height = scrollWrap.getBoundingClientRect().height - 1,
+                speed = 0.04;
+
+            var offset = 0;
+
+            body.style.height = Math.floor(height) + "px";
+
+            function smoothScroll() {
+                offset += (window.pageYOffset - offset) * speed;
+
+                var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                scrollWrap.style.transform = scroll;
+
+                callScroll = requestAnimationFrame(smoothScroll);
+            }
+
+            smoothScroll();
+
+            $(function () {
+                var elements = $(".text, .img").toArray();
+                $(window).scroll(function () {
+                    elements.forEach(function (item) {
+                        if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                            $(item).addClass("reveal");
+                        }
+                    });
+                });
+                elements.forEach(function (item) {
+                    if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                        $(item).addClass("reveal");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
