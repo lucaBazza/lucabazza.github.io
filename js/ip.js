@@ -45,7 +45,7 @@ function code_ipStack(){
 
     // get the API result via jQuery.ajax
     $.ajax({
-        url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,   
+        url: 'https://api.ipstack.com/' + ip + '?access_key=' + access_key,   
         dataType: 'jsonp',
         success: function(json) {
             lng = json.longitude;
