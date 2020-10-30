@@ -46,6 +46,10 @@ p {
     overflow: hidden;
     transition: 0.8s;
 }
+.text-date{
+    /* color: #ffa;*/
+}
+
 .text.reveal {
     color: #fff;
     animation: revealTextAnimation 0.64s ease forwards;
