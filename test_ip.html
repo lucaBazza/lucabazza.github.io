@@ -7,6 +7,12 @@
             margin-top: 10px; 
             padding: 10 10 10 10px;
         }
+        center:nth-child(odd){
+            background-color:aliceblue;
+        }
+        center:nth-child(even){
+            background-color:papayawhip;
+        }
     </style> 
     <script src="js/jquery.min.js"></script> 
     
@@ -15,14 +21,14 @@
 </head> 
   
 <body> 
-    <center style="background-color:aliceblue; "> 
+    <center> 
         <!-- <h1>GeeksforGeeks</h1>  -->
         <h3>Public IP Address of user is:</h3> 
         <h4 id="gfg_ip_by_cloudflare">null</h4>
         <div id="gfg" style="white-space: pre-wrap;"></div>
     </center> 
 
-    <center style="background-color:papayawhip;">
+    <center>
         <input class="ip_ipapi_co" value="8.8.8.8">
         <button class="send" onclick="ip_by_ipapi_co();">Go ipAPI.com</button>
         <br><br>
@@ -30,13 +36,15 @@
         <span class="country"></span>
     </center>
     
-    <center style="background-color:aliceblue;">
+    <center>
         <button class="send_ipstack" onclick='code_ipStack();'>Go ipstack</button>
         <br><br>
         <div class="ipStack_res" style="white-space: pre-wrap;"></div> 
     </center>
 
-    <a href="#" class="map-btn" data-lat="41.8911684" data-lng="12.507724100000019"> Show Map </a>
+    <center>
+        <a href="#" class="map-btn" data-lat="41.8911684" data-lng="12.507724100000019"> Show Map </a>
+    </center>
 
     <script src="js/ip.js"></script>
     <script>

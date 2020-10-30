@@ -1,5 +1,7 @@
 var ipString_cloudflare;
 var ip_data_cloudflare;
+
+var ipStack_datas;
 var lat;
 var lng;
 
@@ -45,12 +47,15 @@ function code_ipStack(){
 
     // get the API result via jQuery.ajax
     $.ajax({
-        url: 'https://api.ipstack.com/' + ip + '?access_key=' + access_key,   
+        url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,   
         dataType: 'jsonp',
         success: function(json) {
+            ipStack_datas = json;
             lng = json.longitude;
             lat = json.latitude;
-            var output = json.location.capital + " / " + json.continent_name + " / " + json.country_name
+            var capital = json.capital;
+
+            var output =  capital + " / " + json.continent_name + " / " + json.country_name
             + "\n type: " + json.type
             + "\n city: "+ json.city
             + "\n region_name: "+ json.region_name
@@ -58,6 +63,9 @@ function code_ipStack(){
             + "\n lat - long : "+ json.latitude +  "  " + json.longitude;
 
             $(".ipStack_res").text(output);
+        },
+        error: function(){
+            $(".ipStack_res").text("error");
         }
     });
 }
