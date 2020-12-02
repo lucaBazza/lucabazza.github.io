@@ -1,0 +1,15 @@
+# come usare:  
+#   1- cd percorso
+#   2- docker-compose up
+#   3- go to http://localhost:5005/
+
+version: '3'
+
+services:
+  lucabazza_git:
+    image: httpd:2.4
+    volumes:
+      - .:/usr/local/apache2/htdocs/
+    ports:
+      - 5005:80
+      - 9999:80
