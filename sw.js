@@ -7,7 +7,7 @@ self.addEventListener("install", e=> {
                     "./",
                     "./index.html",
                     "./horz_scrollDemo.html",
-                    "./loco/index.html"
+                    "./loco/index.html",
                     // JS releated
                     "./manifest.json",
                     "./js/jquery.min.js",
