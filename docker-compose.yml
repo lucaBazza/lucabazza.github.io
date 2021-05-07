@@ -11,5 +11,6 @@ services:
     volumes:
       - .:/usr/local/apache2/htdocs/
     ports:
-      - 5005:80
-      - 9999:80
+      #- 5005:80
+      #- 9999:80
+      - 80:80
