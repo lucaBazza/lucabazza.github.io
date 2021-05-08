@@ -8,21 +8,32 @@ self.addEventListener("install", e=> {
                     "./index.html",
                     "./horz_scrollDemo.html",
                     "./loco/index.html",
+                    "./telegram.html",
                     // JS releated
                     "./manifest.json",
                     "./js/jquery.min.js",
+                    "./js/jsConsole.rainbow.js",
+                    "./loco/dist/scripts/main.js",
                     // CSS
                     "./css/styles.css",
                     "./css/horz_scrollDemo.css",
                     "./css/hScrollDemo.reset.min.css",
                     "./css/hScrollDemo.basscss.min.css",
                     "./css/hScrollDemo.cssFamily=Heebo.css",
+                    "./loco/dist/styles/main.css",
+                    "./loco/site.webmanifest",
+                    "./loco/dist/images/locomotive01.jpg",
                     // FONT
                     "./css/hebrewLatin.woff2", 
+                    "./loco/dist/fonts/NeueMontreal-Medium.woff", 
+                    "./loco/dist/fonts/NeueMontreal-Medium.woff2", 
                     // IMGs
                     "./img/favicon.ico",
                     "./img/logoLB_192px.png",
+                    "./img/logoLB_fill-192px.png",
                     "./img/logoLB_512px.png",
+                    "./img/logoLB_fill-512px.png",
+                    "./img/telegramIcon.png",
                     "./img/DSC09160_ps.jpg",
                     "./img/DSC09022_psPano.jpg",
                     "./img/DSC08241_ps_pano.jpg",
@@ -41,6 +52,13 @@ self.addEventListener("install", e=> {
                     "./img/landscapes/DSC02394_ps.webp",
                     "./img/landscapes/DSC02408_ps.webp",
                     "./img/landscapes/DSC02427_psbw.webp",
+                    "./loco/dist/images/favicons/favicon-16x16.png",
+                    "./loco/dist/images/favicons/favicon-32x32.png",
+                    "./loco/dist/images/favicons/android-chrome-144x144.png",
+                    "./loco/dist/images/sprite.svg",
+                    "./loco/dist/images/locomotive02.jpg",
+                    "./loco/dist/images/locomotive03.jpg",
+                    "./loco/dist/images/locomotive04.jpg",
                 ]);
         })
     );

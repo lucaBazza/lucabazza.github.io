@@ -5,17 +5,26 @@
     "start_url":".",
     "background_color":"#161616",
     "theme_color":"#161616",
-    "display":"standalone",
+    "display":"fullscreen",
     "icons":[
         {
-            "src":"img/logoLB_192px.png",
+            "src":"img/logoLB_fill-192px.png",
             "sizes":"192x192",
             "type":"image/png"
         },
         {
-            "src":"img/logoLB_512px.png",
+            "src":"img/logoLB_fill-512px.png",
             "sizes":"512x512",
             "type":"image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+          "name": "Contact with telegram",
+          "short_name": "Telegram",
+          "description": "Contact Luca with telegram service",
+          "url": "/telegram.html?utm_source=homescreen",
+          "icons": [{ "src": "/img/telegramIcon.png", "sizes": "256x256" }]
         }
     ]
 }
