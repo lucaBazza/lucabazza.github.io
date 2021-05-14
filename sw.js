@@ -28,10 +28,8 @@ self.addEventListener("install", e=> {
                     "./loco/dist/fonts/NeueMontreal-Medium.woff", 
                     "./loco/dist/fonts/NeueMontreal-Medium.woff2", 
                     // IMGs
-                    "./img/favicon.ico",
-                    "./img/logoLB_192px.png",
+                    "./favicon.ico",
                     "./img/logoLB_fill-192px.png",
-                    "./img/logoLB_512px.png",
                     "./img/logoLB_fill-512px.png",
                     "./img/telegramIcon.png",
                     "./img/DSC09160_ps.jpg",

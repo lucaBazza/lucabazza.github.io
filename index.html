@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luca Bazzanella</title>
+    <description>2021 Portfolio Luca Bazzanella #devOps</description>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/jsConsole.rainbow.js"></script>
-    <link rel="icon" href="img/favicon.ico"/>
+    <link rel="icon" type="image/png" href="img/logoLB_fill-192px.png" />
     
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -21,7 +22,7 @@
             <div class="container">
                 <h1 class="text">Luca Bazzanella</h1>
                 <div class="img">
-                     <img src="img/DSC09160_ps.jpg" alt="Fiori" />  <!--<img src="img/DSC01265_ps_16x9.jpg" alt="" /> -->
+                     <img src="img/DSC09160_ps.jpg" alt="Zabba Fiori" />  <!--<img src="img/DSC01265_ps_16x9.jpg" alt="" /> -->
                 </div>
                 <p class="text">
                     Coder based in North Italy  <br><br>
@@ -32,7 +33,7 @@
             <div class="container">
                 <h1 class="text">Work With </h1>
                 <div class="img">
-                    <img src="img/DSC09022_psPano.jpg" alt="" />
+                    <img src="img/DSC09022_psPano.jpg" alt="Worthersee" />
                 </div>
                 <p class="text curruculum_testo" >
                     <strong class="text-date" >2016/17</strong> Wuerth Phoenix -  MySQL Database | .NET <br>
@@ -47,7 +48,7 @@
             <div class="container">
                 <h1 class="text">(R)evolution high</h1>
                 <div class="img">
-                    <img src="img/DSC08241_ps_pano.jpg" alt="" />
+                    <img src="img/DSC08241_ps_pano.jpg" alt="Passo sella" />
                 </div>
                 <p class="text">
                     Student UniTn .Computer Science<br>
@@ -58,7 +59,7 @@
             <div class="container">
                 <h1 class="text">Ispiration</h1>
                 <div class="img">
-                    <img src="img/IMG_0228_ps.jpg" alt="" />
+                    <img src="img/IMG_0228_ps.jpg" alt="Bondone Cornetto" />
                 </div>
                 <p class="text ultimoTesto">
                     + <br>
@@ -82,9 +83,9 @@
                 console.log("%c PWA %s is registrered!", "color:orange; background:black; font-size: 18pt", 'Bazza Dev');
                 consoleRainbow("Enjoy \t and try offline-mode\t");
                
-            }).catch(error=>{console.log("sw reg fail"); });
+            }).catch(error=>{ console.log("sw reg ha riscontrato un problema"); } );
         }
-        else alert("Il browser non permette di creare l'app");
+        else console.log("Il browser non permette di creare l'app");
 
         const body = document.body,
         scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
