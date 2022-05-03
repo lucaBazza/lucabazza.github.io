@@ -9,8 +9,8 @@ lucabazzanella.github.io
 ## I'm a Developer!!
 
 - 🌱 I’m currently learning everything
-- 👯 I’m looking to collaborate with other developers - creators
-- 🥅 2021 Goals: Contribute more to Open Source projects
+- 👯 I’m looking to collaborate with other developers
+- 🥅 2022 Goals: Contribute more to Open Source projects + create my own guitar amp sim 
 - ⚡ Fun fact: I love to compose and play guitar 
 
 <br />
