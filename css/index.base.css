@@ -1,0 +1,18 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /*height: 1600px !important; */
+    background: #161616;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0 120px;
+    overflow-x: hidden;
+}
+
+.content {
+    width: 70%;
+    margin: 200px auto;
+}

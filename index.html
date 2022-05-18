@@ -9,19 +9,13 @@
     <meta name="robots" content="index, follow"/>
     <meta property="og:type" content="website">
     <meta property="og:url" content="lucabazza.github.com">
-    <meta property="og:image" content="https://lucabazza.github.com/img/DSC05500_ps1x1.jpg"/>
+    <meta property="og:image" content="lucabazza.github.io/img/DSC05500_ps1x1.jpg"/>
     <meta property="og:title" content="Luca Bazzanella Dev Portfolio" />
     <meta property="og:description" content="Developer"/>
     
     <link rel="icon" type="image/png" href="img/logoLB_fill-192px.png" />
-    <link rel="stylesheet" href="css/index.css" media="print" onload="this.media='all'"/> <!-- rel="stylesheet" href="css/index.css" /> -->
-    
-    <!-- PWA -->
-    <!--
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#161616">
-    <link rel="apple-touch-icon" href="logoLucaBazzanellaComSquare.png">
-    -->
+    <link rel="stylesheet" href="css/index.base.css"/>
+    <link rel="stylesheet" href="css/index.css" media="print" onload="this.media='all'"/>
 </head>
 <body>
     <div class="smooth-scroll-wrapper">
@@ -29,7 +23,7 @@
             <div class="container">
                 <h1 class="text">Luca Bazzanella</h1>
                 <div class="img">
-                     <img src="img/DSC09160_ps.jpg" alt="Zabba Fiori" />  <!--<img src="img/DSC01265_ps_16x9.jpg" alt="" /> -->
+                     <img src="img/DSC09160_ps.jpg" alt="Zabba Fiori" /><!--<img src="img/DSC01265_ps_16x9.jpg" alt="" /> -->
                 </div>
                 <p class="text">
                     Coder based in North Italy  <br><br>
@@ -43,13 +37,13 @@
                     <img src="img/DSC09022_psPano.jpg" alt="Worthersee" />
                 </div>
                 <p class="text curruculum_testo" >
-                    <strong class="text-date" >2016/17</strong>Wuerth Phoenix -  MySQL Database | .NET <br>
-                    <strong class="text-date" >2017/18 </strong>Studio Pragma - Java | JS Primefaces <br>
-                    <strong class="text-date" >2018  </strong>CoderDojo - C++ | Python <br>
+                    <strong class="text-date" >2016/17 </strong>Wuerth Phoenix -  MySQL Database | .NET <br>
+                    <strong class="text-date" >2017/18 </strong>Studio Pragma - Java | JS Primefaces<br>
+                    <strong class="text-date" >2018  </strong>CoderDojo - C++ | Python | ML<br>
                     <strong class="text-date" >2019  </strong>Supsystic  - PHP | JS | WP plugin <br>
-                    <strong class="text-date" >2019/20 </strong>FBK TEV - Unity 3D | Python | ARcore  <br>
-                    <strong class="text-date" >2020  </strong>Factory Mind -  WebGL <br>
-                    <strong class="text-date" >2021  </strong>IT Data -  PHP | PWA
+                    <strong class="text-date" >2019/20 </strong>FBK TEV - Unity 3D | Python | AR | ML <br>
+                    <strong class="text-date" >2020  </strong>Factory Mind -  WebGL | ML <br>
+                    <strong class="text-date" >2021  </strong>IT Data -  PHP | PWA <br>
                 </p>
             </div>
             <div class="container">
@@ -85,8 +79,6 @@
     </footer>
 </body>
 
-<!-- <script src="js/jsConsole.rainbow.js"></script> -->
-<!-- <script src="js/jquery.min.js"></script> -->
 <script async src="js/jquery.min.js" defer onload="jqueryScroll()"></script>
 <script>
     /* PWA */
@@ -118,23 +110,6 @@
 
     smoothScroll();
 
-    /*
-    $(function () {
-        var elements = $(".text, .img").toArray();
-        $(window).scroll(function () {
-            elements.forEach(function (item) {
-                if ($(this).scrollTop() >= $(item).offset().top - 400) {
-                    $(item).addClass("reveal");
-                }
-            });
-        });
-        elements.forEach(function (item) {
-            if ($(this).scrollTop() >= $(item).offset().top - 400) {
-                $(item).addClass("reveal");
-            }
-        });
-    });
-    */
     function jqueryScroll(){
         var elements = $(".text, .img").toArray();
         $(window).scroll(function () {

@@ -1,22 +1,3 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    /*height: 1600px !important; */
-    background: #161616;
-}
-
-body {
-    box-sizing: border-box;
-    padding: 0 120px;
-    overflow-x: hidden;
-}
-
-.content {
-    width: 70%;
-    margin: 200px auto;
-}
-
 .container { margin: 80px 0; }
 
 h1 {
@@ -96,6 +77,9 @@ p {
 
 .img.reveal img { animation: revealImgAnimation 0.8s ease forwards; }
 
+/*
+        A N I M A T I O N S
+*/
 @keyframes blockRevealAnimation {
     0% {     left: -100%; }
     40% {     left: 0; }
@@ -113,8 +97,9 @@ p {
     100% {     opacity: 1; }
 }
 
-
-/*  M   O   D   */
+/*  
+    M   O   D   S
+*/
 .ultimoTesto{ line-height: 5em; margin-bottom: 0px; }
 .content:last-child {
     margin-bottom: 0;
@@ -122,18 +107,23 @@ p {
 footer{ color:white; }
 footer center{ padding-bottom: 1em; }
 footer a{color:white; text-decoration: none; }
+
+/*
+        R E S P O N S I V E
+*/
 @media (max-width: 990px) { /* general small devices */
-    .content { width: 100%; }
-    h1 { font-size: 20px; }
-    p { font-size: 16px; }
+    .content { width: 100% }
+    h1 { font-size: 20px }
+    p { font-size: 16px }
     .curruculum_testo{
+        line-height: 3em;
         font-size: 12px;
         line-height: 2em;
     }
 }
 
 @media (max-width: 990px) and (orientation:portrait) { /* small devices in vertical */
-    body{ padding: 0 20px ; }
+    body{ padding: 0 20px }
     .content {
         margin: 150px 0px;
         width: 100%; 
@@ -142,11 +132,12 @@ footer a{color:white; text-decoration: none; }
     h1 { font-size: 20px; }
     p { font-size: 12px; }
 }
+
 @media only screen and (max-width: 1100px){ 
-    p { font-size: 16px; }
+    p { font-size: 16px }
 }
 
 @media (min-height:1400px) and (orientation:landscape){ /* monitor 4k o 21:91 4440p */
-    .ultimoTesto{ line-height: 6em; }
+    .ultimoTesto{ line-height: 6em }
 }
 
