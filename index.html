@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Luca Bazzanella</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luca Bazzanella</title>
-    <meta name="description" content="2021 Portfolio Luca Bazzanella #devOps" />
-    <link rel="stylesheet" href="css/index.css" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jsConsole.rainbow.js"></script>
+    <meta name="description" content="2022 Portfolio Luca Bazzanella" />
+    <meta name="keywords" content="Dev, developer, Portfolio, Luca, Bazzanella, devOps, dsp" />
+    <meta name="robots" content="index, follow"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="lucabazza.github.com">
+    <meta property="og:image" content="https://lucabazza.github.com/img/DSC05500_ps1x1.jpg"/>
+    <meta property="og:title" content="Luca Bazzanella Dev Portfolio" />
+    <meta property="og:description" content="Developer"/>
+    
     <link rel="icon" type="image/png" href="img/logoLB_fill-192px.png" />
+    <link rel="stylesheet" href="css/index.css" media="print" onload="this.media='all'"/> <!-- rel="stylesheet" href="css/index.css" /> -->
     
     <!-- PWA -->
+    <!--
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#161616">
     <link rel="apple-touch-icon" href="logoLucaBazzanellaComSquare.png">
+    -->
 </head>
 <body>
     <div class="smooth-scroll-wrapper">
@@ -47,75 +55,100 @@
             <div class="container">
                 <h1 class="text">(R)evolution high</h1>
                 <div class="img">
-                    <img src="img/DSC08241_ps_pano.jpg" alt="Passo sella" />
+                    <img src="img/DSC05579_ps-nograin.jpg" _src="img/DSC08241_ps_pano.jpg" alt="Passo sella" />
                 </div>
                 <p class="text">
                     Computer Science background<br>
-                    DSP enthusiasts <br>
+                    DSP & ML enthusiasts <br>
                     Obsessed by aesthetic
                 </p>
             </div>
             <div class="container">
-                <h1 class="text">Ispiration</h1>
+                <h1 class="text">Ispiration | Things of mine</h1>
                 <div class="img">
                     <img src="img/IMG_0228_ps.jpg" alt="Bondone Cornetto" />
                 </div>
                 <p class="text ultimoTesto">
                     + <br>
-                    <a href="https://lucabazzanella.com/music/">Portfolio audio production / Jazz Lessions</a> <br>
+                    <a href="https://dsp.lucabazzanella.com/">DSP audio plugin project</a><br>
                     + <br>
-                    <a href="https://zabba.lucabazzanella.com">Portfolio fashion work</a> <br>
+                    <a href="https://zabba.lucabazzanella.com">Photograher fashion work</a><br>
                     + <br>
-                    <a href="https://liquidseason.lucabazzanella.com/">Concept music album Liquid Season</a> <br>
+                    <a href="https://liquidseason.lucabazzanella.com/">Liquid Season > concept music album</a><br>
+                    + <br>
+                    <a href="https://lucabazzanella.com/">Blog > teaching | trascriptions</a><br>
             </div>
         </div>
     </div>
     <footer>
         <center>Say Hello <br><a href= "mailto:info@lucabazzanella.com">info@lucabazzanella.com</a></center>
     </footer>
-    <script>
-        /* PWA */
-        if("serviceWorker" in navigator){  
-            navigator.serviceWorker.register("sw.js").then(registration=>{
-                console.log("%c PWA %s is registrered!", "color:orange; background:black; font-size: 18pt", 'Bazza Dev');
-                consoleRainbow("Enjoy \t and try offline-mode\t");
-               
-            }).catch(error=>{ console.log("sw reg ha riscontrato un problema"); } );
-        }
-        else console.log("Il browser non permette di creare l'app");
+</body>
 
-        const body = document.body,
-        scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-        height = scrollWrap.getBoundingClientRect().height - 1,
-        speed = 0.04;
-        var offset = 0;
+<!-- <script src="js/jsConsole.rainbow.js"></script> -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script async src="js/jquery.min.js" defer onload="jqueryScroll()"></script>
+<script>
+    /* PWA */
+    /*
+    if("serviceWorker" in navigator){  
+        navigator.serviceWorker.register("sw.js").then(registration=>{
+            console.log("%c PWA %s is registrered!", "color:orange; background:black; font-size: 18pt", 'Bazza Dev');
+            consoleRainbow("Enjoy \t and try offline-mode\t");
+            
+        }).catch(error=>{ console.log("sw reg ha riscontrato un problema"); } );
+    }
+    else console.log("Il browser non permette di creare l'app");
+    */
 
-        body.style.height = Math.floor(height) + "px";
+    const body = document.body,
+    scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+    height = scrollWrap.getBoundingClientRect().height - 1,
+    speed = 0.04;
+    var offset = 0;
 
-        function smoothScroll() {
-            offset += (window.pageYOffset - offset) * speed;
-            var scroll = "translateY(-" + offset + "px) translateZ(0)";
-            scrollWrap.style.transform = scroll;
-            callScroll = requestAnimationFrame(smoothScroll);
-        }
+    body.style.height = Math.floor(height) + "px";
 
-        smoothScroll();
+    function smoothScroll() {
+        offset += (window.pageYOffset - offset) * speed;
+        var scroll = "translateY(-" + offset + "px) translateZ(0)";
+        scrollWrap.style.transform = scroll;
+        callScroll = requestAnimationFrame(smoothScroll);
+    }
 
-        $(function () {
-            var elements = $(".text, .img").toArray();
-            $(window).scroll(function () {
-                elements.forEach(function (item) {
-                    if ($(this).scrollTop() >= $(item).offset().top - 400) {
-                        $(item).addClass("reveal");
-                    }
-                });
-            });
+    smoothScroll();
+
+    /*
+    $(function () {
+        var elements = $(".text, .img").toArray();
+        $(window).scroll(function () {
             elements.forEach(function (item) {
                 if ($(this).scrollTop() >= $(item).offset().top - 400) {
                     $(item).addClass("reveal");
                 }
             });
         });
-    </script>
-</body>
+        elements.forEach(function (item) {
+            if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                $(item).addClass("reveal");
+            }
+        });
+    });
+    */
+    function jqueryScroll(){
+        var elements = $(".text, .img").toArray();
+        $(window).scroll(function () {
+            elements.forEach(function (item) {
+                if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                    $(item).addClass("reveal");
+                }
+            });
+        });
+        elements.forEach(function (item) {
+            if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                $(item).addClass("reveal");
+            }
+        });
+    }
+</script>
 </html>
