@@ -24,7 +24,7 @@ p {
     overflow: hidden;
     transition: 0.8s;
 }
-.text-date{ /* color: #ffa;*/ }
+.text-date{ /*color: #ffa;*/ }
 
 .text.reveal {
     color: #fff;
@@ -45,9 +45,10 @@ p {
 
 .text a{ color: var(--colorBackground); }
 .text.reveal a{
-    color: #fff;
+    color: #bbb;
     text-decoration: none;
 }
+.text.reveal a:hover{ color: #fff }
 
 .img {
     position: relative;
@@ -74,6 +75,10 @@ p {
 
 .img.reveal img { animation: revealImgAnimation 0.8s ease forwards; }
 
+.applist > img { padding: 0 0.5em 0 0.5em; max-width: 1.5em; filter: saturate(0); }
+.applist > img:first-child{ padding: 0 }
+.applist > img:hover { filter: saturate(1); transition: 0.5s; padding: 0 1em 0 1em; }
+
 /*
         A N I M A T I O N S
 */
@@ -98,12 +103,11 @@ p {
     M   O   D   S
 */
 .ultimoTesto{ line-height: 5em; margin-bottom: 0px; }
-.content:last-child {
-    margin-bottom: 0;
-}
-footer{ color:white; }
-footer center{ padding-bottom: 1em; }
-footer a{color:white; text-decoration: none; }
+.content:last-child { margin-bottom: 0 }
+footer{ color:white }
+footer center{ padding-bottom: 1em }
+footer a{ color:white; text-decoration: none; }
+footer img:hover { cursor:grab }
 
 /*
         R E S P O N S I V E

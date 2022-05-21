@@ -23,3 +23,5 @@ body {
 }
 h1,p,a{ color:var(--colorBackground) /* proprietà riscritta poi */ }
 img{ max-width: 60vw }
+footer img { padding: 1.0em; width:2em; filter: invert(1); }
+.text > img{ width: 1em; height: 1em; opacity: 0; } 
