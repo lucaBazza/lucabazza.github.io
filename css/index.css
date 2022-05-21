@@ -24,9 +24,7 @@ p {
     overflow: hidden;
     transition: 0.8s;
 }
-.text-date{
-    /* color: #ffa;*/
-}
+.text-date{ /* color: #ffa;*/ }
 
 .text.reveal {
     color: #fff;
@@ -41,12 +39,11 @@ p {
     /*   z-index: 1; */
 }
 .text.reveal:before {
-    background: #6c2e13;
+    background: var(--colRevealRosso);
     animation: blockRevealAnimation 0.8s ease forwards;
 }
 
-
-.text a{ color: #161616; }
+.text a{ color: var(--colorBackground); }
 .text.reveal a{
     color: #fff;
     text-decoration: none;
@@ -71,7 +68,7 @@ p {
 }
 
 .img.reveal:before {
-    background: #544c26;
+    background: var(--colRevealOcra);
     animation: blockRevealAnimation 0.8s ease forwards;
 }
 

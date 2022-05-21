@@ -1,9 +1,14 @@
+*{
+    --colorBackground:#161616;
+    --colRevealOcra: #544c26;
+    --colRevealRosso: #6c2e13;
+}
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background: var(--colorBackground);
     /*height: 1600px !important; */
-    background: #161616;
 }
 
 body {
@@ -16,3 +21,5 @@ body {
     width: 70%;
     margin: 200px auto;
 }
+h1,p,a{ color:var(--colorBackground) /* proprietà riscritta poi */ }
+img{ max-width: 60vw }

@@ -3,14 +3,15 @@
 <head>
     <title>Luca Bazzanella</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="2022 Portfolio Luca Bazzanella" />
-    <meta name="keywords" content="Dev, developer, Portfolio, Luca, Bazzanella, devOps, dsp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="description" content="2022 Portfolio Luca Bazzanella"/>
+    <meta name="keywords" content="Dev, developer, Portfolio, Luca, Bazzanella, devOps, dsp"/>
     <meta name="robots" content="index, follow"/>
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="lucabazza.github.com">
     <meta property="og:image" content="lucabazza.github.io/img/DSC05500_ps1x1.jpg"/>
-    <meta property="og:title" content="Luca Bazzanella Dev Portfolio" />
+    <meta property="og:title" content="Luca Bazzanella Dev Portfolio"/>
     <meta property="og:description" content="Developer"/>
     
     <link rel="icon" type="image/png" href="img/logoLB_fill-192px.png" />
@@ -23,7 +24,7 @@
             <div class="container">
                 <h1 class="text">Luca Bazzanella</h1>
                 <div class="img">
-                     <img src="img/DSC09160_ps.jpg" alt="Zabba Fiori" /><!--<img src="img/DSC01265_ps_16x9.jpg" alt="" /> -->
+                     <img src="img/DSC09160_ps.jpg" alt="Zabba Fiori"/>
                 </div>
                 <p class="text">
                     Coder based in North Italy  <br><br>
@@ -75,40 +76,21 @@
         </div>
     </div>
     <footer>
-        <center>Say Hello <br><a href= "mailto:info@lucabazzanella.com">info@lucabazzanella.com</a></center>
+        <center>
+            Say Hello<br>
+            <strong><a href= "mailto:info@lucabazzanella.com">info@lucabazzanella.com</a></strong>
+        </center>
     </footer>
 </body>
 
 <script async src="js/jquery.min.js" defer onload="jqueryScroll()"></script>
 <script>
-    /* PWA */
-    /*
-    if("serviceWorker" in navigator){  
-        navigator.serviceWorker.register("sw.js").then(registration=>{
-            console.log("%c PWA %s is registrered!", "color:orange; background:black; font-size: 18pt", 'Bazza Dev');
-            consoleRainbow("Enjoy \t and try offline-mode\t");
-            
-        }).catch(error=>{ console.log("sw reg ha riscontrato un problema"); } );
-    }
-    else console.log("Il browser non permette di creare l'app");
-    */
-
     const body = document.body,
     scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
     height = scrollWrap.getBoundingClientRect().height - 1,
     speed = 0.04;
     var offset = 0;
-
     body.style.height = Math.floor(height) + "px";
-
-    function smoothScroll() {
-        offset += (window.pageYOffset - offset) * speed;
-        var scroll = "translateY(-" + offset + "px) translateZ(0)";
-        scrollWrap.style.transform = scroll;
-        callScroll = requestAnimationFrame(smoothScroll);
-    }
-
-    smoothScroll();
 
     function jqueryScroll(){
         var elements = $(".text, .img").toArray();
@@ -125,5 +107,14 @@
             }
         });
     }
+    
+    function smoothScroll() {
+        offset += (window.pageYOffset - offset) * speed;
+        var scroll = "translateY(-" + offset + "px) translateZ(0)";
+        scrollWrap.style.transform = scroll;
+        callScroll = requestAnimationFrame(smoothScroll);
+    }
+
+    smoothScroll();
 </script>
 </html>
