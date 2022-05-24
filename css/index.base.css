@@ -2,6 +2,7 @@
     --colorBackground:#161616;
     --colRevealOcra: #544c26;
     --colRevealRosso: #6c2e13;
+    --colTextDarkWhite: #ccc;
 }
 html, body {
     margin: 0;
@@ -25,3 +26,17 @@ h1,p,a{ color:var(--colorBackground) /* proprietà riscritta poi */ }
 img{ max-width: 60vw }
 footer img { padding: 1.0em; width:2em; filter: invert(1); }
 .text > img{ width: 1em; height: 1em; opacity: 0; } 
+
+.extraText { 
+    display: none; 
+    color: var(--colTextDarkWhite);
+}
+.extraText > a {font-size: smaller; letter-spacing: -3px;  }
+.extraText > a:hover { letter-spacing: 0px; transition: 1s;  }
+span:hover .extraText {
+    height: max-content; /*funziona solo sul div di text-date???*/
+    display: inline-block;
+    animation-name: fadeInText;
+    animation-duration: 1.5s;
+}
+@keyframes fadeInText { from {opacity:0} to {opacity: 1} }
