@@ -1,14 +1,43 @@
-.container { margin: 80px 0; }
+*{
+    --colorBackground:#161616;
+    --colRevealOcra: #544c26;
+    --colRevealRosso: #6c2e13;
+    --colTextDarkWhite: #ccc;
+    --textDateFont: 50px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--colorBackground);
+    /*height: 1600px !important; */
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0 120px;
+    overflow-x: hidden;
+}
+
+.content {
+    width: 70%;
+    margin: 200px auto;
+}
+
+img{ max-width: 60vw }
+.text > img{ width: 1em; height: 1em; opacity: 0; } 
+
+.container { margin: 80px 0 }
 
 h1 {
     text-transform: uppercase;
     color: #fff;
     font-family: "Monument Extended";
-    font-size: 60px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1.4px;
     padding: 10px 0;
     margin-bottom: 16px;
+    font-size: clamp(2rem, 3.5vw, 12rem); /*60px;*/
 }
 
 p {
@@ -26,7 +55,13 @@ p {
 
     line-height: 200%;
 }
-.text-date{ float:left; letter-spacing: 0.3em; font-weight: bolder;  font-size: 50px; /*color: #ffa;*/ }
+.text-date{ 
+    float:left; 
+    letter-spacing: 0.3em; 
+    font-weight: bolder;  
+    font-size:  clamp(1.5rem, 2.5vw, 4rem); /* var(--textDateFont); */
+    /*color: #ffa;*/ 
+}
 
 /*.curruculum_testo{ width: 70% }*/
 
@@ -79,9 +114,10 @@ p {
 
 .img.reveal img { animation: revealImgAnimation 0.8s ease forwards; }
 
-.applist > img { padding: 0 0.5em 0 0.5em; max-width: 1.5em; filter: saturate(0); }
+.applist > img { padding: 0 0.5em 0 0.5em; width: max(1.5em, 7%); /*max-width: 1.5em;*/ filter: saturate(0); }
 .applist > img:first-child{ padding: 0 }
 .applist > img:hover { filter: saturate(1); transition: 0.5s; padding: 0 1em 0 1em; }
+
 
 /*
         A N I M A T I O N S
@@ -103,27 +139,53 @@ p {
     100% {     opacity: 1; }
 }
 
+
 /*  
         M   O   D   S
 */
 .ultimoTesto{ line-height: 5em; margin-bottom: 0px; }
 .content:last-child { margin-bottom: 0 }
 footer{ color:white }
+footer img { padding: 1.0em; width:2em; filter: invert(1); } /* IMG LOGO TELEGRAM */
 footer center{ padding-bottom: 1em }
 footer a{ color:white; text-decoration: none; }
 footer img:hover { cursor:grab }
+
+
+/* 
+        TEXT HIDING EFFECT 
+*/
+.extraText { 
+    display: none; 
+    color: var(--colTextDarkWhite);
+}
+.extraText > a { 
+    font-size: smaller; 
+    letter-spacing: -1px;  
+}
+.extraText > a:hover { 
+    letter-spacing: 0px; 
+    transition: .5s;  
+}
+span:hover .extraText {
+    height: max-content; /*funziona solo sul div di text-date???*/
+    display: inline-block;
+    animation-name: fadeInText;
+    animation-duration: 1.5s;
+}
+@keyframes fadeInText { from {opacity:0} to {opacity: 1} }
+
 
 /*
         R E S P O N S I V E
 */
 @media (max-width: 990px) { /* general small devices */
     .content { width: 100% }
-    h1 { font-size: 20px }
-    p { font-size: 16px }
+    /*h1 { font-size: 20px }*/
+    /*p { font-size: 16px } */
     .curruculum_testo{
-        line-height: 3em;
-        font-size: 12px;
-        line-height: 2em;
+        /*font-size: 12px;*/
+        line-height: 5em;
     }
 }
 
@@ -134,8 +196,7 @@ footer img:hover { cursor:grab }
         width: 100%; 
     }
     .container { margin: 0px 0; }
-    h1 { font-size: 20px; }
-    p { font-size: 12px; }
+    /*h1 { font-size: 20px; } p { font-size: 12px; }*/
 }
 
 @media only screen and (max-width: 1100px){ 
