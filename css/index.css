@@ -96,6 +96,7 @@ p {
 }
 
 .img img { max-width: 100%; opacity: 0; }
+.img video { max-width: 100%; opacity: 0; }
 
 .img:before {
     content: "";
@@ -113,10 +114,13 @@ p {
 }
 
 .img.reveal img { animation: revealImgAnimation 0.8s ease forwards; }
+.img.reveal video { animation: revealImgAnimation 0.8s ease forwards; }
 
 .applist > img { padding: 0 0.5em 0 0.5em; width: max(1.5em, 7%); /*max-width: 1.5em;*/ filter: saturate(0); }
 .applist > img:first-child{ padding: 0 }
 .applist > img:hover { filter: saturate(1); transition: 0.5s; padding: 0 1em 0 1em; }
+
+.testdisabled { margin-left: 2rem; color: #aaa; }
 
 
 /*
