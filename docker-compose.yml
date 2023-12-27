@@ -2,7 +2,7 @@ version: '3'
 
 services:
   lucabazza_git:
-    image: httpd:2.4
+    image: httpd:2.4-alpine
     volumes:
       - .:/usr/local/apache2/htdocs/
     ports:
