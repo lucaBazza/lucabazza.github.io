@@ -9,5 +9,5 @@ lucabazzanella.github.io
 
 - 🌱 I’m currently learning everything
 - 👯 I’m looking to collaborate with other developers
-- 🥅 2022 Goals: Contribute more to Open Source projects + create my own guitar amp sim 
+- 🥅 2024 Goals: Contribute more to Open Source projects + create my own guitar amp sim 
 - ⚡ Fun fact: I love to compose and play guitar 
