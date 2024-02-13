@@ -1,0 +1,50 @@
+stages:
+  - build
+  - deploy
+
+services:
+  - name: "docker:25-dind"
+    command: ["--tls=false", "--insecure-registry=registryZabba:5000"]
+
+variables:
+  DOCKER_HOST: "tcp://docker:2375" # not strictly needed, depending on runner configuration
+  DOCKER_TLS_CERTDIR: ""  # not strictly needed, depending on runner configuration
+  CONTAINER_REGISTRY: "registryZabba:5000"
+  DOCKER_IMAGE_NAME: "lucabazza.github.io:latest"
+  SSH_HOST: "192.168.1.76"
+  ARCH: "linux/arm64/v8"
+  #SSH_PRIVATE_KEY: "should be set from gitlab (group) hidden variable"
+
+build:
+  stage: build
+  script:
+    - echo "building arm64 image..."
+    - docker buildx build --push --progress plain --platform $ARCH -t $CONTAINER_REGISTRY/$DOCKER_IMAGE_NAME .
+  after_script:
+    - docker buildx rm --all-inactive --force
+
+# Add a `.` in front of a job to make it hidden.
+# Add a `&reference` to make it a reusable template.
+# Note that we don't have dashes anymore.
+.init_ssh: &init_ssh |
+  eval $(ssh-agent -s)
+  echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  mkdir -p ~/.ssh
+  chmod 700 ~/.ssh
+  [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+deploy:
+  stage: deploy
+  before_script:
+    - *init_ssh
+    #- 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    #- eval $(ssh-agent -s)
+    #- ssh-add <(echo "$SSH_PRIVATE_KEY" | tr -d '\r')
+    #- mkdir -p ~/.ssh
+    #- chmod 700 ~/.ssh
+    #- ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+  script:
+    - echo "deploy... force command to watchtower to update the container"
+    - ssh root@$SSH_HOST
+  dependencies:
+    - build

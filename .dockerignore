@@ -1,0 +1,28 @@
+# ignore readme
+README.md
+
+# ignore docker compose file
+docker-compose.yml
+
+# ignore dockerfile file
+Dockerfile
+
+logo.png
+
+# ignore .gitignore file
+.gitignore
+
+# ignore .git folder
+.git
+
+# ignore .idea folder
+.idea
+
+# ignore .vscode folder
+.vscode
+
+# ignore subfolder img/_old
+img/_old
+
+# ignore subfolder img/_landscapes
+img/_landscapes
