@@ -16,16 +16,28 @@ lucabazzanella.github.io
 
 &nbsp;
 
-## Deploy
-
+test locally
 ```bash
-#       PRODUCTION RUN
 docker run -d \
-    --network frontend \
-    --restart unless-stopped \ 
     --name lucabazza.github.io \
+    -p 8080:80 \
     registry.zabba.dev/lucabazza.github.io:latest
 ```
+
+## Deploy to production
 ```bash
-docker run -d --network frontend --restart unless-stopped --name lucabazza.github.io registry.zabba.dev/lucabazza.github.io:latest
+# build and push
+docker build \
+    --no-cache \
+    --pull \
+    -t registry.zabba.dev/lucabazza.github.io:latest .
+```
+
+```bash
+# 🍊 run production on pvt server
+docker run -d \
+    --name lucabazza.github.io \
+    --network frontend \
+    --restart unless-stopped \ 
+    registry.zabba.dev/lucabazza.github.io:latest
 ```

@@ -1,14 +1,31 @@
-FROM nginx:1.25.3-alpine3.18-perl
+# use smallest image: 740Kb  (note that could not have AMD64 support)
+FROM busybox:1.36.1-uclibc
 
-COPY . /usr/share/nginx/html
+# Create a non-root user to own the files and run our server
+RUN adduser -D static
+USER static
+WORKDIR /home/static
+
+# Copy the static website
+# Use the .dockerignore file to control what ends up inside the image!
+COPY . .
+
+# Run BusyBox httpd
+CMD ["busybox", "httpd", "-f", "-v", "-p", "80"]
+
+
+
+#FROM nginx:1.25.3-alpine3.18-perl
+
+#COPY . /usr/share/nginx/html
 
 # remove unwanted
-RUN rm /usr/share/nginx/html/nginx.conf
+#RUN rm /usr/share/nginx/html/nginx.conf
 
 # copy nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 80
+#EXPOSE 80
 
 
 ##       OLDER VERSION
