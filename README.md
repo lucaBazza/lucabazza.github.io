@@ -29,7 +29,7 @@ docker run -d \
 # build and push
 docker build \
     --no-cache \
-    --pull \
+    --push \
     -t registry.zabba.dev/lucabazza.github.io:latest .
 ```
 
