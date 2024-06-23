@@ -3,7 +3,7 @@ stages:
   - deploy
 
 services:
-  - name: "docker:25-dind"
+  - name: "docker:26-dind"
     command: ["--tls=false", "--insecure-registry=registryZabba:5000"]
 
 variables:
@@ -12,6 +12,7 @@ variables:
   CONTAINER_REGISTRY: "registryZabba:5000"
   DOCKER_IMAGE_NAME: "lucabazza.github.io:latest"
   SSH_HOST: "192.168.1.76"
+  # SSH_USER: "should be set from gitlab (group) hidden variable"
   ARCH: "linux/arm64/v8"
   #SSH_PRIVATE_KEY: "should be set from gitlab (group) hidden variable"
 
@@ -45,6 +46,6 @@ deploy:
     #- ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
   script:
     - echo "deploy... force command to watchtower to update the container"
-    - ssh root@$SSH_HOST
+    - ssh $SSH_USER@$SSH_HOST
   dependencies:
     - build

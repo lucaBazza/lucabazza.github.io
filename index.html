@@ -15,7 +15,7 @@
     <meta property="og:description" content="Developer Portfolio > DSP.AUDIO | WEB.STACK | CODE.PATTERNS"/>
     
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css?"/>
 </head>
 <body>
     <div class="smooth-scroll-wrapper">
@@ -23,15 +23,21 @@
             <div class="container">
                 <h1 class="text">Luca Bazzanella</h1>
                 <div class="img">
-                     <img src="img/DSC09160_ps.jpg" alt="Zabba Fiori"/>
+                     <picture>
+                        <!-- <source type="image/avif" srcset="img/portfolios/DSC09160_ps.avif" media="(max-width: 480px)"> -->
+                        <source type="image/avif" srcset="img/portfolios/DSC09160_ps-1500.avif">
+                        <img    type="image/jpg" src="/img/portfolios/DSC09160_ps.jpg" alt="Zabba Fiori">
+                    </picture>
                 </div>
                 <p class="text">
-                    Coder based in North Italy<br><br>
-                    &nbsp; &nbsp; &nbsp; DSP Audio<br><br>
-                    &nbsp; &nbsp; &nbsp; WEB Architecture<br><br>
-                    &nbsp; &nbsp; &nbsp; CODE | UX Patterns
+                    Passionate Software Engeneer based in North Italy<br><br>
+                    &nbsp; &nbsp; &nbsp; <span class="textSecondary" style="margin: 0">Web</span> &nbsp; Development<br>
+                    &nbsp; &nbsp; &nbsp; <span class="textSecondary" style="margin: 0">Cloud</span> &nbsp; DevOps<br>
+                    <!-- &nbsp; &nbsp; &nbsp; DSP Audio<br><br> -->
+                    &nbsp; &nbsp; &nbsp; <span class="textSecondary" style="margin: 0">Coding</span> &nbsp; UX Patterns <br>
                 </p>
             </div>
+            <!-- -->
             <div class="container">
                 <h1 class="text">Work With</h1>
                 <div class="img">
@@ -44,11 +50,7 @@
                     <span><strong class="text-date">2021    &nbsp; </strong>   IT Data         <span class="extraText"> &nbsp; PHP | PWA | VueJS | Kubernetes </span>   </span><br>
                     <span><strong class="text-date">2020    &nbsp; </strong>   Factory Mind    <span class="extraText"> &nbsp; WebGL | ML | TS | Docker</span>          </span><br>
                     <span><strong class="text-date">2019/20 &nbsp; </strong>   FBK Foundation
-                                <span class="extraText"> &nbsp; Unity 3D | Python | AR | ML | Pubblications<br>
-                                 <!--    <a> &nbsp; Multiview data capture for dynamic scene reconstruction using handheld mobiles</a><br>
-                                    <a> &nbsp; Dynamic object reconstruction using handheld Augmented-Reality mobiles</a><br>
-                                    <a> &nbsp; Cloud-based collaborative 3D reconstruction using smartphones</a> -->
-                                </span>                                                                                                                                 </span><br>
+                                                                                <span class="extraText"> &nbsp; Unity 3D | Python | AR | ML | Pubblications</span>      </span><br>
                     <span><strong class="text-date">2019    &nbsp; </strong>   Supsystic       <span class="extraText"> &nbsp; PHP | JS | WP plugin</span>              </span><br>
                     <span><strong class="text-date">2018/19 &nbsp; </strong>   Coder Dojo      <span class="extraText"> &nbsp; C++ | Python</span>                      </span><br>
                     <span><strong class="text-date">2017/18 &nbsp; </strong>   Studio Pragma   <span class="extraText"> &nbsp; Springboot | JS Primefaces</span>        </span><br>
@@ -57,12 +59,27 @@
                 <br><br>
                 <p class="text">
                     <div class="img applist">
-                        <img src="img/logo-terminalOSx.png"/><img src="img/logo-Xcode.png"/><img src="img/logo-vsc.png"/><img src="img/logo-docker.svg"/><img src="img/logo-Kubernetes.svg"/>
-                        <img src="img/logo-juce.png"/><img src="img/logo-github.png"/><img src="img/logo-js.png"/><img src="img/logo-python.png"/><img src="img/logo-stackoverflow.png"/><img src="img/logo-typescript.svg" />
+                        <img src="/img/logo/logo-terminalOSx.png"/>
+                        <img src="img/logo/logo-Xcode.png"/>
+                        <img src="img/logo/logo-vsc.png"/>
+                        <img src="/img/logo/logo-intellij-macos-sm.png" style="border-radius: 1em;" />
+                        <img src="img/logo/logo-docker.svg"/>
+                        <img src="img/logo/logo-Kubernetes.svg"/>
+                        <img src="/img/logo/logo-azure-sm.png" />
+                        <img src="img/logo/logo-github.png"/>
+                        <img src="/img/logo/logo-juce.png"/>
+                        <img src="img/logo/logo-python.png"/>
+                        <!-- <img src="img/logo-js.png"/> -->
+                        <!-- <img src="/img/logo-stackoverflow.png"/> -->
+                        <img src="/img/logo/logo-unity-sm.png" />
+                        <img src="/img/logo/logo-laravel.png" style="border-radius: 1em;"/>
+                        <img src="/img/logo/logo-vue.png" />
+                        <img src="/img/logo/logo-typescript.svg" />
                     </div>
                 </p>
                 <br><br><br><br>
             </div>
+            <!-- -->
             <div class="container">
                 <h1 class="text">Ideas (R)evolution</h1>
                 <div class="img">
@@ -76,6 +93,7 @@
                 </p>
                 <br><br><br><br>
             </div>
+            <!-- -->
             <div class="container">
                 <h1 class="text">Ispiration <br> &nbsp;&nbsp; Things I create</h1>
                 <!-- 
@@ -97,11 +115,16 @@
                 </p>
                 -->
             </div>
+            <!-- -->
             <div class="container" onclick="location.href=`https://dsp.lucabazzanella.com`;">
-                <h2 class="text">DSP audio effects <span class="testdisabled">EQ > SAT CEVE</span></h2>
+                <h2 class="text">DSP audio effects <span class="textSecondary">EQ > SAT CEVE</span></h2>
                 <!-- <span class="extraText"> &nbsp; EQ > SAT CEVE</span> -->
                 <div class="img">
-                    <img src="img/dsp-screen.jpg"/>
+                    <img 
+                        style="max-width: min(100%, 1340px); border-radius: 1em;"
+                        src="img/dsp-screen.jpg"
+                        alt="DSP audio effects EQ > SAT CEVE"
+                    />
                     <!-- <img src="img/DSC07483-ps_ProP-2 21x9.webp"/> -->
                     <!-- <video autoplay="" loop="" muted="" width="420" height="420">
                         <source src="https://dsp.lucabazzanella.com/img/EqZabbaDemo-2.av1" type="video/mp4; codecs=av01.0.05M.08">
@@ -109,40 +132,48 @@
                     </video> -->
                 </div>
             </div>
+            <!-- -->
             <div class="container" onclick="location.href=`https://zabba.lucabazzanella.com`;">
-                <h2 class="text">Published Photographer <span class="testdisabled">Fashion | Portraits | Videomaking</span></h2>
+                <h2 class="text">Published Photographer <span class="textSecondary">Fashion | Portraits | Videomaking</span></h2>
                 <!-- <span class="extraText"> &nbsp; Fashion | Portraits | Videomaking</span> -->
                 <div class="img">
-                    <img src="img/lucabazza.github.ph.jpg"/>
+                    <img 
+                        style="max-width: min(100%, 1340px); border-radius: 1em;"
+                        src="img/lucabazza.github.ph.jpg" alt="lucabazza github portfolio"/>
                 </div>
             </div>
+            <!-- -->
             <div class="container" onclick="location.href=`https://liquidseason.lucabazzanella.com`;">
-                <h2 class="text">Liquid Season <span class="testdisabled">Concept progressive music EP</span></h2>
+                <h2 class="text">Liquid Season <span class="textSecondary">Concept progressive music EP</span></h2>
                 <!-- <span class="extraText"> &nbsp; Concept progressive music EP</span> -->
                 <div class="img">
-                    <video autoplay="" loop="" muted="" width="100%" height="auto">
-                        <source src="img/2021_11_Lases-Luccio-Demo4-5-clip.mp4" type="video/mp4">
+                    <video style="max-width: min(100%, 1340px); border-radius: 1em;" autoplay="" loop="" muted="" width="100%" height="auto">
+                        <source src="img/2021_11_Lases-Luccio-Demo4-5-clip.mp4" type="video/mp4" alt="lases clip">
                     </video>
                 </div>
             </div>
-            <div class="container" onclick="location.href=`https://image-toolkit-app.web.app/`;">
+            <!-- -->
+            <div class="container" _onclick="location.href=`https://image-toolkit-app.web.app/`;">
                 <h2 class="text">Pic Kit 
-                    <span class="testdisabled">Image editor online.  ML | Firebase | WebGL | PS script compiler</span>
+                    <span class="textSecondary">Image editor online<br/>ML | Firebase | WebGL | PS script compiler</span>
                 </h2>
                 <!-- <span class="extraText"> &nbsp; Concept progressive music EP</span> -->
                 <div class="img">
                     <img
-                        style="width:100%; height: 337px; object-fit: cover;"
-                        src="/img/20220724-screen.webp"/>
+                        style="width:100%; height: 337px; object-fit: cover; border-radius: 1em;"
+                        src="/img/20220724-screen.webp"
+                        alt="Pic Kit Image editor online. ML | Firebase | WebGL | PS script compiler"
+                    />
                 </div>
             </div>
+            <!-- -->
             <div class="container" onclick="location.href=`https://lucabazzanella.com/`;">
-                <h2 class="text">Teaching | Trascriptions | Zabba GitLab 
-                    <span class="testdisabled">More photos, blog, updates</span>
+                <h2 class="text">Teaching | Trascriptions | Zabba GitLab
+                    <span class="textSecondary">Photos | Blog | Notes</span>
                 </h2>
                 <div class="img">
                     <img
-                        style="width:100%; height: 337px; object-fit: cover;"
+                        style="width:100%; height: 337px; object-fit: cover; border-radius: 1em;"
                         src="img/lucabazzanella.com-home.jpg"/>
                 </div>
             </div>
@@ -165,12 +196,12 @@
     </footer>
 </body>
 
-<script async src="js/jquery.min.js" defer onload="jqueryScroll()"></script>
+<script src="js/jquery.min.js" defer onload="jqueryScroll()"></script>
 <script>
     const body = document.body,
-    scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-    height = scrollWrap.getBoundingClientRect().height - 1,
-    speed = 0.04;
+        scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+        height = scrollWrap.getBoundingClientRect().height - 1,
+        speed = 0.04;
     var offset = 0;
     body.style.height = Math.floor(height) + "px";
 
@@ -198,5 +229,7 @@
     }
 
     smoothScroll();
+
+    // magick -quality 70 $inputPath -define avif:speed=1 -geometry x2800 $outPath.avif"
 </script>
 </html>
