@@ -3,7 +3,7 @@ lucabazzanella.github.io
 
 ### Hi there, I'm Luca - aka [Zabba][lucabazzanella.com] 👋
 
-[![Website](https://raw.githubusercontent.com/lucaBazza/lucabazza.github.io/main/img/DSC09160_ps.jpg)](https://lucabazza.github.io)
+[![Website](https://raw.githubusercontent.com/lucaBazza/lucabazza.github.io/main/img/portfolios/DSC09160_ps.jpg)](https://lucabazza.github.io)
 
 ## I'm a Developer!!
 
