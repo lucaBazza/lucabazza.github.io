@@ -1,0 +1,11 @@
+services:
+  lucabazza.github.io:
+    #image: httpd:2.4-alpine
+    #volumes:
+    #  - .:/usr/local/apache2/htdocs/
+    image: nginx:1.27.0-alpine3.19-slim
+    volumes:
+      - .:/usr/share/nginx/html
+    #  - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
