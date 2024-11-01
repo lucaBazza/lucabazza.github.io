@@ -21,7 +21,7 @@ test locally
 docker run -d \
     --name lucabazza.github.io \
     -p 8080:80 \
-    registry.zabba.dev/lucabazza.github.io:latest
+    registry.home.zabba.dev/lucabazza.github.io:latest
 ```
 
 ## Deploy to production
@@ -30,7 +30,7 @@ docker run -d \
 docker build \
     --no-cache \
     --push \
-    -t registry.zabba.dev/lucabazza.github.io:latest .
+    -t registry.home.zabba.dev/lucabazza.github.io:latest .
 ```
 
 ```bash
@@ -39,7 +39,7 @@ docker run -d \
     --name lucabazza.github.io \
     --network frontend \
     --restart unless-stopped \ 
-    registry.zabba.dev/lucabazza.github.io:latest
+    registry.home.zabba.dev/lucabazza.github.io:latest
 ```
 
 
