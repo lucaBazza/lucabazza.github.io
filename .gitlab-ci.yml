@@ -1,9 +1,10 @@
+#
 stages:
   - build
   - deploy
 
 services:
-  - name: "docker:27-dind"
+  - name: "docker:27.3-dind"
     command: ["--tls=false", "--insecure-registry=registryZabba:5000"]
 
 variables:
