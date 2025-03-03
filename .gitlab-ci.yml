@@ -44,9 +44,9 @@ deploy:
     #- ssh-add <(echo "$SSH_PRIVATE_KEY" | tr -d '\r')
     #- mkdir -p ~/.ssh
     #- chmod 700 ~/.ssh
-    #- ssh-keyscan -H $SSH_HOST_ORANGEPLUS >> ~/.ssh/known_hosts
+    #- ssh-keyscan -H $SSH_HOST_ORANGEPI5 >> ~/.ssh/known_hosts
   script:
     - echo "deploy... force command to watchtower to update the container"
-    - ssh $SSH_USER@$SSH_HOST_ORANGEPLUS
+    - ssh $SSH_USER@SSH_HOST_ORANGEPI5
   dependencies:
     - build
