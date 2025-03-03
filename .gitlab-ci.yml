@@ -46,7 +46,7 @@ deploy:
     #- chmod 700 ~/.ssh
     #- ssh-keyscan -H $SSH_HOST_ORANGEPI5 >> ~/.ssh/known_hosts
   script:
-    - echo "deploy... force command to watchtower to update the container"
+    - echo "deploy... force command to watchtower to update the container on the orange pi $SS_USER $SSH_HOST_ORANGEPI5"
     - ssh $SSH_USER@SSH_HOST_ORANGEPI5
   dependencies:
     - build
