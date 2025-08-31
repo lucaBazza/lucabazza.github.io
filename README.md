@@ -40,7 +40,7 @@ docker build \
 ```bash
 # 🍊 run production on hcloud server, proxied by traefik
 docker context use hcloud;
-docker compose -f ~/Documents/gitlab-zabba/orangepi/template-hcloud/compose.yml up dsp -d
+docker compose -f ~/Documents/gitlab-zabba/orangepi/template-hcloud/compose.yml up zabba-dev -d
 ```
 
 &nbsp;
