@@ -16,6 +16,9 @@ EXPOSE 80
 # Run BusyBox httpd
 CMD ["busybox", "httpd", "-f", "-v", "-p", "80"]
 
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+    CMD wget --spider --quiet http://localhost/ || exit 1
+
 
 
 #FROM nginx:1.25.3-alpine3.18-perl

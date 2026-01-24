@@ -7,6 +7,9 @@ docker-compose.yml
 # ignore dockerfile file
 Dockerfile
 
+nginx.conf
+.gitlab-ci.yml
+
 logo.png
 
 # ignore .gitignore file

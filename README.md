@@ -26,21 +26,21 @@ docker run -d \
 
 &nbsp;
 
-## Deploy to production 2025
+## Deploy to production 2026
 ```bash
 # build and push
-docker context use default;
-docker build \
-    --no-cache \
-    --push \
-    --platform linux/amd64 \
-    -t registry.public.zabba.site/lucabazza.github.io:latest .
+docker --context default build \
+  --no-cache \
+  --push \
+  --platform linux/amd64 \
+  -t registry.public.bazza.club/lucabazza.github.io:latest .
 ```
 
 ```bash
-# 🍊 run production on hcloud server, proxied by traefik
-docker context use hcloud;
-docker compose -f ~/Documents/gitlab-zabba/orangepi/template-hcloud/compose.yml up zabba-dev -d
+# 🍊 run production on hCloud server, proxied by traefik
+docker --context hcloud compose \
+  -f ../../gitlab-zabba/orangepi/template-hcloud/compose.yml \
+  up zabba-dev -d
 ```
 
 &nbsp;
