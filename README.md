@@ -26,23 +26,6 @@ docker run -d \
 
 &nbsp;
 
-## Deploy to production 2026
-```bash
-# build and push
-docker --context default build \
-  --no-cache \
-  --push \
-  --platform linux/amd64 \
-  -t registry.public.bazza.club/lucabazza.github.io:latest .
-```
-
-```bash
-# 🍊 run production on hCloud server, proxied by traefik
-docker --context hcloud compose \
-  -f ../../gitlab-zabba/orangepi/template-hcloud/compose.yml \
-  up zabba-dev -d
-```
-
 &nbsp;
 
 ## Deploy to production 2024
@@ -53,17 +36,11 @@ docker build \
     --push \
     -t registry.home.zabba.dev/lucabazza.github.io:latest .
 ```
-
 ```bash
-# 🍊 run production on pvt server
-docker run -d \
-    --name lucabazza.github.io \
-    --network frontend \
-    --restart unless-stopped \ 
-    registry.home.zabba.dev/lucabazza.github.io:latest
+# 🍊 run production compose
+docker --context orangeplus compose \
+  -f ../../gitlab-zabba/orangepi/template-orangeplus/client-portfolio-stack.yml \
+  up zabba-dev -d
 ```
 
-
 &nbsp;
-
-12:08
